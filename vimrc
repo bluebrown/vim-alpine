@@ -103,4 +103,7 @@ au FileType make set noexpandtab
 au FileType markdown set syntax=markdown
 " Python
 autocmd FileType python setlocal omnifunc=python3complete#Complete
-
+" JavaScript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1

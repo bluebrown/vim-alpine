@@ -8,14 +8,10 @@ git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
 ```
 Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
-## Meta
-
+## Creator
 Nico Braun – [@littlebluebrown](https://twitter.com/littlebluebrown) – nico-braun@live.de
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
 ## Contributing
-
 1. Fork it (<https://github.com/bluebrown/vim-alpine/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)

@@ -10,3 +10,6 @@
 [submodule "pack/core/start/vim-multiple-cursors"]
 	path = pack/core/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "pack/core/start/vim"]
+	path = pack/core/start/vim
+	url = https://github.com/dracula/vim

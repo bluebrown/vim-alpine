@@ -200,6 +200,7 @@ au FileType proto set tabstop=2
 
 " Python:
 " -------
+autocmd FileType python setlocal omnifunc=python3complete#Complete
 au FileType python set expandtab
 au FileType python set shiftwidth=4
 au FileType python set softtabstop=4

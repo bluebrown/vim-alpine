@@ -14,8 +14,6 @@ Nico Braun – [@littlebluebrown](https://twitter.com/littlebluebrown) – nico-
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
-[https://github.com/bluebrown/github-link](https://github.com/dbader/)
-
 ## Contributing
 
 1. Fork it (<https://github.com/bluebrown/vim-alpine/fork>)

@@ -8,7 +8,7 @@ git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
 ```
 Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
-## Creator
+## Author
 Nico Braun – [@littlebluebrown](https://twitter.com/littlebluebrown) – nico-braun@live.de
 
 ## Contributing

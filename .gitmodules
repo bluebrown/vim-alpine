@@ -14,3 +14,6 @@
 	path = pack/core/start/vim
 	url = https://github.com/dracula/vim
 
+[submodule "pack/lang/opt/vim-vue"]
+	path = pack/lang/opt/vim-vue
+	url = https://github.com/storyn26383/vim-vue

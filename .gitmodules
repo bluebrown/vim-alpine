@@ -13,18 +13,4 @@
 [submodule "pack/core/start/vim"]
 	path = pack/core/start/vim
 	url = https://github.com/dracula/vim
-[submodule "pack/lang/start/jedi-vim"]
-	path = pack/lang/start/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
-[submodule "pack/lang/start/vim-javascript"]
-	path = pack/lang/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule "pack/lang/start/vim-jsx"]
-	path = pack/lang/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx
-[submodule "pack/lang/start/vim-graphql"]
-	path = pack/lang/start/vim-graphql
-	url = https://github.com/jparise/vim-graphql
-[submodule "pack/lang/start/vim-markdown"]
-	path = pack/lang/start/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown
+

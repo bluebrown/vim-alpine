@@ -17,3 +17,18 @@
 [submodule "pack/lang/opt/vim-vue"]
 	path = pack/lang/opt/vim-vue
 	url = https://github.com/storyn26383/vim-vue
+[submodule "pack/lang/opt/vim-javascript"]
+	path = pack/lang/opt/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/lang/opt/vim-css3-syntax"]
+	path = pack/lang/opt/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "pack/lang/opt/scss-syntax.vim"]
+	path = pack/lang/opt/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "pack/lang/opt/vim-pug"]
+	path = pack/lang/opt/vim-pug
+	url = https://github.com/digitaltoad/vim-pug
+[submodule "pack/lang/opt/jedi-vim"]
+	path = pack/lang/opt/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim

@@ -1,0 +1,9 @@
+[submodule "pack/core/start/VimCompletesMe"]
+	path = pack/core/start/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe
+[submodule "pack/core/start/nerdtree"]
+	path = pack/core/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "pack/core/start/vim-autoclose"]
+	path = pack/core/start/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose

@@ -1,18 +1,15 @@
 [submodule "pack/core/start/nerdtree"]
 	path = pack/core/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule "pack/core/start/vim-multiple-cursors"]
-	path = pack/core/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors
 [submodule "pack/core/start/vim"]
 	path = pack/core/start/vim
 	url = https://github.com/dracula/vim
 
-[submodule "pack/lang/opt/vim-vue"]
+[submodule "pack/lang/start/vim-vue"]
 	path = pack/lang/opt/vim-vue
 	url = https://github.com/storyn26383/vim-vue
-[submodule "pack/lang/opt/vim-javascript"]
-	path = pack/lang/opt/vim-javascript
+[submodule "pack/lang/start/vim-javascript"]
+	path = pack/lang/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
 [submodule "pack/lang/opt/vim-css3-syntax"]
 	path = pack/lang/opt/vim-css3-syntax
@@ -23,6 +20,6 @@
 [submodule "pack/lang/opt/vim-pug"]
 	path = pack/lang/opt/vim-pug
 	url = https://github.com/digitaltoad/vim-pug
-[submodule "pack/lang/opt/jedi-vim"]
-	path = pack/lang/opt/jedi-vim
+[submodule "pack/lang/start/jedi-vim"]
+	path = pack/lang/start/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim

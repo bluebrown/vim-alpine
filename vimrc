@@ -12,20 +12,22 @@ autocmd BufWritePre * %s/\s\+$//e
 set splitbelow
 set noswapfile
 set noerrorbells
-set nowrap
-set nospell
 if has("autocmd") " Remember curser position in files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
 " Editor:
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 set autoindent
 set smartindent
-set expandtab
-set softtabstop=2
-set tabstop=2
+set cindent
 set list
 set listchars=tab:\|\ ,trail:▫
+set nowrap
+set nospell
 " Visual:
 set t_Co=256
 try
@@ -73,8 +75,6 @@ nnoremap N Nzzzv
 "~~~~~~~~~~~~~~~~~~~~~~~
 " TOOL CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
-" MultiLineCursor:
-let g:multi_cursor_quit_key = '<Esc>'
 " Nerdtree:
 nnoremap <F3> :NERDTreeToggle<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -88,8 +88,6 @@ let g:airline#extensions#tabline#enabled = 1
 "~~~~~~~~~~~~~~~~~~~~~~~
 " LANGUAGE CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-set autoindent smartindent cindent
 " Bash
 au FileType sh set noexpandtab
 " Gitcommit

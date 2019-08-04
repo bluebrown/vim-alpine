@@ -20,6 +20,3 @@
 [submodule "pack/lang/opt/jedi-vim"]
 	path = pack/lang/opt/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
-[submodule "pack/lang/opt/vim-javascript"]
-	path = pack/lang/opt/vim-javascript
-	url = https://github.com/pangloss/vim-javascript

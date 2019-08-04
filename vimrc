@@ -15,7 +15,12 @@ autocmd BufWritePre * %s/\s\+$//e " trim trailing white space
 set splitbelow
 set noswapfile
 set noerrorbells
-set title
+set title " file info in window title
+autocmd! VimLeave * mksession ~/.vim/session.vim
+try " Load previous session on start
+    autocmd! VimEnter * source ~/.vim/session.vim
+catch
+endtry
 if has("autocmd") " Remember curser position in files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
@@ -32,7 +37,7 @@ set list
 set nowrap
 set nospell
 " Visual:
-set listchars=tab:\|\ ,trail:▫ " show trailing whitespace
+set listchars=tab:\|\ ,trail:▫
 set t_Co=256
 try
   colorscheme dracula
@@ -81,8 +86,8 @@ nnoremap <F3> :NERDTreeToggle<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode = 2
-" Ctags:
-command! MakeTags !ctags -R . " Generates tags file in current dir
+" Ctags: " generate ctags
+command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
@@ -101,6 +106,8 @@ au FileType make set noexpandtab
 " Markdown:
 au FileType markdown set syntax=markdown
 " Python:
+set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
+set errorformat=%f:%l:\ %m
 autocmd FileType python setlocal omnifunc=python3complete#Complete
 " JavaScript:
 let g:javascript_plugin_jsdoc = 1
@@ -112,7 +119,6 @@ autocmd!  BufRead *.ts  set filetype=typescript
 "~~~~~~~~~~~~~~~~~~~~~~~
 " FILE BROWSING:
 "~~~~~~~~~~~~~~~~~~~~~~~
-" Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
@@ -122,3 +128,13 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - :edit a folder to open a file browser
 " - <CR>/v/t to open in an h-split/v-split/tab
 " - check |netrw-browse-maps| for more mappings
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL

@@ -80,28 +80,29 @@ nnoremap <F3> :NERDTreeToggle<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode = 2
-" Airline:
-let g:airline_theme='dracula'
-let g:airline_powerline_fonts = 1
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
 "~~~~~~~~~~~~~~~~~~~~~~~
 " LANGUAGE CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
-" Bash
+" Bash:
 au FileType sh set noexpandtab
-" Gitcommit
+" Gitcommit:
 au FileType gitcommit setlocal spell
 au FileType gitcommit setlocal textwidth=80
-" Gitconfig
+" Gitconfig:
 au FileType gitconfig set noexpandtab
-" Make
+" Make:
 au FileType make set noexpandtab
-" Markdown
+" Markdown:
 au FileType markdown set syntax=markdown
-" Python
+" Python:
+autocmd! FileType python packadd jedi-vim
 autocmd FileType python setlocal omnifunc=python3complete#Complete
-" JavaScript
+" JavaScript:
+autocmd! FileType javascript packadd vim-javascript
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
+" HTML:
+autocmd! FileType html packadd ! emmet-vim
+" TypeScript:
+autocmd!  BufRead *.ts  set filetype=typescript

@@ -16,11 +16,6 @@ set splitbelow
 set noswapfile
 set noerrorbells
 set title " file info in window title
-autocmd! VimLeave * mksession ~/.vim/session.vim
-try " Load previous session on start
-    autocmd! VimEnter * source ~/.vim/session.vim
-catch
-endtry
 if has("autocmd") " Remember curser position in files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
@@ -113,7 +108,6 @@ autocmd FileType python setlocal omnifunc=python3complete#Complete
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
-" HTML:
 " TypeScript:
 autocmd!  BufRead *.ts  set filetype=typescript
 "~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,9 +124,6 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - check |netrw-browse-maps| for more mappings
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
-" Put these lines at the very end of your vimrc file.
-
-" Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
 " Load all of the helptags now, after plugins have been loaded.

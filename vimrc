@@ -96,8 +96,6 @@ map <leader>c :nohlsearch<cr>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" FileBrowser:
-
 "~~~~~~~~~~~~~~~~~~~~~~~
 " TOOL CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~

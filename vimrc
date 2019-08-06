@@ -14,6 +14,9 @@ set clipboard=unnamedplus
 set mouse=a
 " disable swap files
 set noswapfile
+" persistent undo history
+set undofile
+set undodir=~/.vim/undo
 " enabled file browser plugin with :edit <dirname>
 filetype plugin on
 " allow recursive search
@@ -94,7 +97,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " FileBrowser:
-map <F2> :vsplit <CR> :edit . <CR>
+
 "~~~~~~~~~~~~~~~~~~~~~~~
 " TOOL CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,18 +107,34 @@ command! MakeTags !ctags -R .
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
 
-"FileBrowser: use :edit . to open filebrowser in current dir
+"FileBrowser: use <F3> to open
+map <F3> :call ToggleNetrw() <CR>
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 let g:netrw_banner=0        " disable annoying banner
+let g:netrw_winsize = 18    " width in percent
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
-
-
+" ret g:netrw_list_hide=netrw_gitignore#Hide()
+" let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+" check: |netrw-browse-maps| for more mappings
+function! ToggleNetrw()
+        let i = bufnr("$")
+        let isOpen = 1
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i
+                let isOpen = 0
+            endif
+            let i-=1
+        endwhile
+    if isOpen
+        silent Lexplore
+    endif
+endfunction
 "~~~~~~~~~~~~~~~~~~~~~~~
 " LANGUAGE CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,4 +174,3 @@ packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
-

@@ -2,24 +2,41 @@
 " SETTINGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
 " Basic:
+" modern features
 set nocompatible
-set showcmd
-filetype plugin on
-set path +=** "allow recursive search
-set wildmenu " tab complete for :find
+" standard encoding
 set encoding=utf-8
-set autoread " re-read file when its changed outside vim
+" re-read file when its changed outside vim
+set autoread
+" allows to copy from os clipboard
 set clipboard=unnamedplus
-set mouse=a " allow to use the mouse
-autocmd BufWritePre * %s/\s\+$//e " trim trailing white space
-set splitbelow
+" allow to use the mouse
+set mouse=a
+" disable swap files
 set noswapfile
+" enabled file browser plugin with :edit <dirname>
+filetype plugin on
+" allow recursive search
+set path +=**
+" tab complete for :find
+set wildmenu
+" enable incremental search with /
+set incsearch
+" highlight search matches
+set hlsearch
+" Remember cursor position in files
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" trim trailing white space
+au BufWritePre * %s/\s\+$//e
+" new splits buffere on bottom
+set splitbelow
+" no sound on error
 set noerrorbells
-set title " file info in window title
-if has("autocmd") " Remember curser position in files
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
-endif
+" file info in window title
+set title
+" show typed commands
+set showcmd
+
 " Editor:
 set tabstop=4
 set softtabstop=4
@@ -31,8 +48,8 @@ set cindent
 set list
 set nowrap
 set nospell
+
 " Visual:
-set listchars=tab:\|\ ,trail:▫
 set t_Co=256
 try
   colorscheme dracula
@@ -41,13 +58,13 @@ endtry
 syntax enable
 set ruler
 set foldcolumn=2
+set listchars=tab:\|\ ,trail:▫
 highlight foldcolumn ctermbg=none
 highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
-" Search:
-set incsearch
-set hlsearch
+
+
 "~~~~~~~~~~~~~~~~~~~~~~~
 " KEY BINDINGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,6 +75,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>h :split<cr>
+
 " Typo:
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -69,50 +87,24 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+
 " Search:
 map <leader>c :nohlsearch<cr>
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" FileBrowser:
+map <F2> :vsplit <CR> :edit . <CR>
 "~~~~~~~~~~~~~~~~~~~~~~~
 " TOOL CONFIGS:
 "~~~~~~~~~~~~~~~~~~~~~~~
-" Nerdtree:
-nnoremap <F3> :NERDTreeToggle<cr>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeShowHidden = 1
-let g:NERDTreeChDirMode = 2
-" Ctags: " generate ctags
+" Ctags: creates tags file in current dir
 command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
-"~~~~~~~~~~~~~~~~~~~~~~~
-" LANGUAGE CONFIGS:
-"~~~~~~~~~~~~~~~~~~~~~~~
-" Bash:
-au FileType sh set noexpandtab
-" Gitcommit:
-au FileType gitcommit setlocal spell
-au FileType gitcommit setlocal textwidth=80
-" Gitconfig:
-au FileType gitconfig set noexpandtab
-" Make:
-au FileType make set noexpandtab
-" Markdown:
-au FileType markdown set syntax=markdown
-" Python:
-set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
-set errorformat=%f:%l:\ %m
-autocmd FileType python setlocal omnifunc=python3complete#Complete
-" JavaScript:
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
-let g:javascript_plugin_flow = 1
-" TypeScript:
-autocmd!  BufRead *.ts  set filetype=typescript
-"~~~~~~~~~~~~~~~~~~~~~~~
-" FILE BROWSING:
-"~~~~~~~~~~~~~~~~~~~~~~~
+
+"FileBrowser: use :edit . to open filebrowser in current dir
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
@@ -123,9 +115,44 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - <CR>/v/t to open in an h-split/v-split/tab
 " - check |netrw-browse-maps| for more mappings
 
+
+"~~~~~~~~~~~~~~~~~~~~~~~
+" LANGUAGE CONFIGS:
+"~~~~~~~~~~~~~~~~~~~~~~~
+" Bash:
+au FileType sh set noexpandtab
+
+" Gitcommit:
+au FileType gitcommit setlocal spell
+au FileType gitcommit setlocal textwidth=80
+
+" Gitconfig:
+au FileType gitconfig set noexpandtab
+
+" Make:
+au FileType make set noexpandtab
+
+" Markdown:
+au FileType markdown set syntax=markdown
+
+" Python:
+set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
+set errorformat=%f:%l:\ %m
+autocmd FileType python setlocal omnifunc=python3complete#Complete
+
+" JavaScript:
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+" TypeScript:
+autocmd!  BufRead *.ts  set filetype=typescript
+
+
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
+

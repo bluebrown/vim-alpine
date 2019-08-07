@@ -107,10 +107,10 @@ command! MakeTags !ctags -R .
 
 "FileBrowser: use <F3> to open
 map <F3> :call ToggleNetrw() <CR>
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_winsize = 18    " width in percent
 let g:netrw_browse_split=4  " open in prior window
@@ -121,15 +121,15 @@ let g:netrw_liststyle=3     " tree view
 " check: |netrw-browse-maps| for more mappings
 function! ToggleNetrw()
         let i = bufnr("$")
-        let isOpen = 1
+        let wasOpen = 0
         while (i >= 1)
             if (getbufvar(i, "&filetype") == "netrw")
                 silent exe "bwipeout " . i
-                let isOpen = 0
+                let wasOpen = 1
             endif
             let i-=1
         endwhile
-    if isOpen
+    if !wasOpen
         silent Lexplore
     endif
 endfunction
@@ -165,6 +165,12 @@ let g:javascript_plugin_flow = 1
 " TypeScript:
 autocmd!  BufRead *.ts  set filetype=typescript
 
+"~~~~~~~~~~~~~~~~~~~~~~~
+" Snippets:
+"~~~~~~~~~~~~~~~~~~~~~~~
+nnoremap \bulma :-1read $HOME/.vim/snippets/bulma.html<CR>11j4wv4l
+" Use tis pattern to assign new snippets. Use motion after <CR>
+" to set cursor position after pasting snippet into current file
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 " Plugins need to be added to runtimepath before helptags can be generated.

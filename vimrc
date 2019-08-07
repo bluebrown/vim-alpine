@@ -1,6 +1,6 @@
-"~~~~~~~~~~~~~~~~~~~~~~~
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " SETTINGS:
-"~~~~~~~~~~~~~~~~~~~~~~~
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Basic:
 " modern features
 set nocompatible
@@ -23,15 +23,14 @@ filetype plugin on
 set path +=**
 " tab complete for :find
 set wildmenu
-" enable incremental search with /
+" enable incremental search with and hightlight matches use / to search
 set incsearch
-" highlight search matches
 set hlsearch
 " Remember cursor position in files
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " trim trailing white space
 au BufWritePre * %s/\s\+$//e
-" new splits buffere on bottom
+" new splits buffer on bottom
 set splitbelow
 " no sound on error
 set noerrorbells
@@ -63,14 +62,15 @@ set ruler
 set foldcolumn=2
 set listchars=tab:\|\ ,trail:▫
 highlight foldcolumn ctermbg=none
-highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+" Below will use the terminal background - useful when using with tmux
+"highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
+"highlight Normal ctermbg=none
+"highlight NonText ctermbg=none
 
 
-"~~~~~~~~~~~~~~~~~~~~~~~
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " KEY BINDINGS:
-"~~~~~~~~~~~~~~~~~~~~~~~
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Sane Splits:
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -96,17 +96,14 @@ map <leader>c :nohlsearch<cr>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-"~~~~~~~~~~~~~~~~~~~~~~~
-" TOOL CONFIGS:
-"~~~~~~~~~~~~~~~~~~~~~~~
-" Ctags: creates tags file in current dir
-command! MakeTags !ctags -R .
-" - Use ^] to jump to tag under cursor
-" - Use g^] for ambiguous tags
-" - Use ^t to jump back up the tag stack
-
-"FileBrowser: use <F3> to open
+" Netrw Toggle:
 map <F3> :call ToggleNetrw() <CR>
+
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" TOOL CONFIGS:
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"FileBrowser: use <F3> to open
 " augroup ProjectDrawer
 "   autocmd!
 "   autocmd VimEnter * :Vexplore
@@ -133,9 +130,17 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
-"~~~~~~~~~~~~~~~~~~~~~~~
+
+" Ctags: creates tags file in current dir
+command! MakeTags !ctags -R .
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
+
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " LANGUAGE CONFIGS:
-"~~~~~~~~~~~~~~~~~~~~~~~
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Bash:
 au FileType sh set noexpandtab
 
@@ -165,14 +170,15 @@ let g:javascript_plugin_flow = 1
 " TypeScript:
 autocmd!  BufRead *.ts  set filetype=typescript
 
-"~~~~~~~~~~~~~~~~~~~~~~~
-" Snippets:
-"~~~~~~~~~~~~~~~~~~~~~~~
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" SNIPPET CONFIGS:
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 nnoremap \bulma :-1read $HOME/.vim/snippets/bulma.html<CR>11j4wv4l
 " Use tis pattern to assign new snippets. Use motion after <CR>
 " to set cursor position after pasting snippet into current file
 
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
 " Load all of the helptags now, after plugins have been loaded.

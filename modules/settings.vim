@@ -1,6 +1,3 @@
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-" SETTINGS:
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Basic:
 " modern features
 set nocompatible
@@ -59,12 +56,11 @@ catch
 endtry
 syntax enable
 set ruler
-set foldcolumn=2
+set foldcolumn=3
 set listchars=tab:\|\ ,trail:▫
 highlight foldcolumn ctermbg=none
 " Below will use the terminal background - useful when using with tmux
 "highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 "highlight Normal ctermbg=none
 "highlight NonText ctermbg=none
-
 

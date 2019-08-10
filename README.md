@@ -21,17 +21,17 @@ use :help <plugin-name> to learn more
 
 ### Actions: verbs
 
-- surround                's'  for surroundings
-- commentary              'gc' for comments
-- ReplaceWithRegister     'gr 'for replacements
-- sort_motion             'gs' for sorting
-- system_copy             'cp' for copying to xsel clipboard
+- surround ---            `s`  for surroundings
+- commentary ---          `gc` for comments
+- ReplaceWithRegister --- `gr` for replacements
+- sort_motion ---         `gs` for sorting
+- system_copy ---         `cp` for copying to xsel clipboard
 
 ### Text Objects: nouns
 
-- indent-object           'i' to target indent group e.g. gcai
-- textobj-line            'l' to target line without whitespace e.g. yal
-- entire                  'e' to target entire document e.g. dae
+- indent-object ---       `i` to target indent group e.g. gcai
+- textobj-line ---        `l` to target line without whitespace e.g. yal
+- entire ---              `e` to target entire document e.g. dae
 
 ### IDE:
 - auto-pair               auto close brackets and quotes
@@ -49,8 +49,8 @@ use :help <plugin-name> to learn more
 
 ## Custom Functionallity:
 
-- <F3> to toggle 'netrw' file browser
-- :MakeTags to generaze 'tags'
+- `<F3>` to toggle 'netrw' file browser
+- `:MakeTags` to generaze 'tags'
 
 
 ## Snippets: will expand in current file

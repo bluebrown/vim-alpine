@@ -22,9 +22,9 @@ silent! helptags ALL
 " "system_copy"             'cp' for copying to xsel clipboard
 
 " Text Objects: nouns
-" "indent-object"           'i' to target indent group
-" "textobj-line"            'l' to target line without whitespace
-" "entire"                  'e' to target entire document
+" "indent-object"           'i' to target indent group e.g. gcai
+" "textobj-line"            'l' to target line without whitespace e.g. yal
+" "entire"                  'e' to target entire document e.g. dae
 
 " IDE:
 " "auto-pair"               auto close brackets and quotes

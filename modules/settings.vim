@@ -3,6 +3,8 @@
 set nocompatible
 " standard encoding
 set encoding=utf-8
+" reduce clockrate from 4sec to 100ms
+set updatetime=100
 " re-read file when its changed outside vim
 set autoread
 " allows to copy from os clipboard
@@ -56,11 +58,10 @@ catch
 endtry
 syntax enable
 set ruler
-set foldcolumn=3
+set foldcolumn=1
 set listchars=tab:\|\ ,trail:▫
 highlight foldcolumn ctermbg=none
 " Below will use the terminal background - useful when using with tmux
 "highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 "highlight Normal ctermbg=none
 "highlight NonText ctermbg=none
-

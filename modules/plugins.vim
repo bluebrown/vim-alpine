@@ -26,9 +26,9 @@ function! ToggleNetrw()
     endif
 endfunction
 
-" Ctags: creates tags file in current dir
+
+"Ctags: creates tags file in current dir
 command! MakeTags !ctags -R --exclude=*css --exclude=*.html --exclude=.git --exclude=node_modules
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
-

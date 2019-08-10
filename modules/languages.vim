@@ -17,7 +17,7 @@ au FileType markdown set syntax=markdown
 " Python:
 set makeprg=pylint\ --reports=n\ --output-format=parseable\ %:p
 set errorformat=%f:%l:\ %m
-autocmd FileType python setlocal omnifunc=python3complete#Complete
+au FileType python setlocal omnifunc=python3complete#Complete
 
 " JavaScript:
 let g:javascript_plugin_jsdoc = 1
@@ -25,5 +25,8 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
 " TypeScript:
-autocmd!  BufRead *.ts  set filetype=typescript
+au!  BufRead *.ts  set filetype=typescript
 
+" HTML CSS:
+let g:user_emmet_install_global = 0
+au FileType html,css EmmetInstall

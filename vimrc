@@ -1,4 +1,5 @@
-for f in glob('~/.vim/modules/*.vim', 0, 1)
+" source config files
+for f in glob('~/.vim/modules/*.vim', -1, 1)
     execute 'source' f
 endfor
 
@@ -8,15 +9,35 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+
+" Plugins:
+"use :help <plugin-name> to learn more
+
+" core:
+" "surround" new motions for surroundings
+" "supertab" autocomplete on tab
+" "fugitive" git integration
+" "gitgutter" show changes
 
 
+" language:
+" "jedi-vim"
+" "vim-javascript"
+" "emmet-vim"
 
-" Features:
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 
-"  <F3> to toggle file browser
-" :MakeTags to generaze ctags
+"  Custom Functionallity:
 
+"  "<F3>" to toggle "netrw" file browser
+" ":MakeTags" to generaze "ctags"
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 
 " Snippets: will expand in current file
 
-" \bulma - html template
+" "\bulma" - html template
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+

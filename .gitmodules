@@ -20,3 +20,18 @@
 [submodule "pack/lang/start/emmet-vim"]
 	path = pack/lang/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "pack/core/start/vim-fugitive"]
+	path = pack/core/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/core/start/vim-surround"]
+	path = pack/core/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/core/start/auto-pairs"]
+	path = pack/core/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "pack/core/start/vim-gitgutter"]
+	path = pack/core/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "pack/core/start/supertab"]
+	path = pack/core/start/supertab
+	url = https://github.com/ervandew/supertab

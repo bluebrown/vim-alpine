@@ -1,58 +1,67 @@
 # vim-alpine
+
 a minimalist setup, that containes only a handfull of essential configurations and plugins.
 
-## Setup
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#setup)Setup
+
 Make sure to clone this repository recursively, as it is composed of serveral submodules.
+
 ```
 git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
+
 ```
-Since this project relies on vim8's native plugin management through :packadd,
-no other tools or installation are required.
 
-## vimrc
+Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
-The vimrc loads files from the modules folder to keep things more organized
-add new functionalitly and settings there
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#vimrc)vimrc
 
+The vimrc loads files from the modules folder to keep things more organized add new functionalitly and settings there
 
-## Plugins:
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#plugins)Plugins:
 
-use :help <plugin-name> to learn more
+*use `:help <script name>` to learn more*
 
-### Actions: verbs
+### Actions - 'verbs'
 
-- surround ---            `s`  for surroundings
-- commentary ---          `gc` for comments
-- ReplaceWithRegister --- `gr` for replacements
-- sort_motion ---         `gs` for sorting
-- system_copy ---         `cp` for copying to xsel clipboard
+| Scriptname | Motion | Description |
+|:-:|:-:|:-:|
+|surround|`s`| manipulate surroundings 
+|commentary|`gc`|toggle comments
+|ReplaceWithRegister|`gr`|replace selection
+|sort_motion|`gs`|sort selection
+|system_copy|`cp`|copy to xsel clipboard
 
-### Text Objects: nouns
+### Text Objects - 'nouns'
 
-- indent-object ---       `i` to target indent group e.g. gcai
-- textobj-line ---        `l` to target line without whitespace e.g. yal
-- entire ---              `e` to target entire document e.g. dae
+| Scriptname | Motion | Description |
+|:-:|:-:|:-:|
+|indent-object|`i`|target indent group
+textobj-line|`l`|target line without whitespace
+entire|`e`|target entire document
 
 ### IDE:
-- auto-pair               auto close brackets and quotes
-- supertab                autocomplete on tab
 
-### Git:
-- fugitive                git integration
-- gitgutter               show changes
+-   auto-pair auto close brackets and quotes
+-   supertab autocomplete on tab
 
-### Language:
-- jedi-vim
-- vim-javascript
-- emmet-vim
+### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#git)Git:
 
+-   fugitive git integration
+-   gitgutter show changes
 
-## Custom Functionallity:
+### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#language)Language:
 
-- `<F3>` to toggle 'netrw' file browser
-- `:MakeTags` to generaze 'tags'
+-   jedi-vim
+-   vim-javascript
+-   emmet-vim
 
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionallity:
 
-## Snippets: will expand in current file
+-   `<F3>`  to toggle 'netrw' file browser
+-   `:MakeTags`  to generaze 'tags'
 
-- \bulma - html template
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets: will expand in current file
+
+| Motion | Description |
+|:-:|:-:
+|`\bulma`|html template

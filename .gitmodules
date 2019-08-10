@@ -35,3 +35,27 @@
 [submodule "pack/core/start/supertab"]
 	path = pack/core/start/supertab
 	url = https://github.com/ervandew/supertab
+[submodule "pack/core/start/vim-commentary"]
+	path = pack/core/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "pack/core/start/ReplaceWithRegister"]
+	path = pack/core/start/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister
+[submodule "pack/core/start/vim-sort-motion"]
+	path = pack/core/start/vim-sort-motion
+	url = https://github.com/christoomey/vim-sort-motion
+[submodule "pack/core/start/vim-system-copy"]
+	path = pack/core/start/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy
+[submodule "pack/core/start/vim-indent-object"]
+	path = pack/core/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule "pack/core/start/vim-textobj-line"]
+	path = pack/core/start/vim-textobj-line
+	url = https://github.com/kana/vim-textobj-line
+[submodule "pack/core/start/vim-textobj-entire"]
+	path = pack/core/start/vim-textobj-entire
+	url = https://github.com/kana/vim-textobj-entire
+[submodule "pack/core/start/vim-textobj-user"]
+	path = pack/core/start/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user

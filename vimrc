@@ -11,17 +11,30 @@ silent! helptags ALL
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 
-" Plugins:
+" PLUGINS:
 "use :help <plugin-name> to learn more
 
-" core:
-" "surround" new motions for surroundings
-" "supertab" autocomplete on tab
-" "fugitive" git integration
-" "gitgutter" show changes
+" Actions: verbs
+" "surround"                's'  for surroundings
+" "commentary"              'gc' for comments
+" "ReplaceWithRegister"     'gr 'for replacements
+" "sort_motion"             'gs' for sorting
+" "system_copy"             'cp' for copying to xsel clipboard
 
+" Text Objects: nouns
+" "indent-object"           'i' to target indent group
+" "textobj-line"            'l' to target line without whitespace
+" "entire"                  'e' to target entire document
 
-" language:
+" IDE:
+" "auto-pair"               auto close brackets and quotes
+" "supertab"                autocomplete on tab
+
+" Git:
+" "fugitive"                git integration
+" "gitgutter"               show changes
+
+" Language:
 " "jedi-vim"
 " "vim-javascript"
 " "emmet-vim"

@@ -67,7 +67,7 @@ tern|javascript intellisense
  to use ale with **pipenv**, run `pipenv install --dev pylint`.  
  To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.
 
-> *Ceveate **Tern***  
+> *Ceveat **Tern***  
  To use tern, setup a `.tern-project.json` file.
  You can copy the example file from `:help tern-usage` to get going.
 

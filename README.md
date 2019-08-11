@@ -55,6 +55,7 @@ The vimrc loads files from the modules folder, to keep things more organized. Ad
 |:---------:|:------------------------------:|
 | auto-pair | auto close brackets and quotes |
 | supertab  | autocomplete on tab            |
+| ale       | linting                        |
 
 #### Language:
 
@@ -72,7 +73,7 @@ The vimrc loads files from the modules folder, to keep things more organized. Ad
  *Caveat **Tern***<br>
  To use tern, setup a `.tern-project.json` file.<br>
  You can copy the example file from `:help tern-usage` to get going.<br>
-
+It doesn't play with supetab at the moment. Get completion with `^X^O`
 
 ### Git Integration
 

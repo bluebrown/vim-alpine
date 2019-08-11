@@ -25,7 +25,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 
 | Scriptname | Motion | Description |
 |:-:|:-:|:-:|
-|surround|`s`| manipulate surroundings 
+|surround|`s`| manipulate surroundings
 |commentary|`gc`|toggle comments
 |ReplaceWithRegister|`gr`|replace selection
 |sort_motion|`gs`|sort selection
@@ -41,27 +41,36 @@ entire|`e`|target entire document
 
 ### IDE:
 
--   auto-pair auto close brackets and quotes
--   supertab autocomplete on tab
+| Plugin | Description |
+|:-:|:-:|
+auto-pair|auto close brackets and quotes
+supertab|autocomplete on tab
 
 ### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#git)Git:
 
--   fugitive git integration
--   gitgutter show changes
+| Plugin | Description |
+|:-:|:-:|
+-fugitive|git integration
+-gitgutter|show changes
 
 ### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#language)Language:
 
--   jedi-vim
--   vim-javascript
--   emmet-vim
+| Plugin | Description |
+|:-:|:-:|
+polyglot|syntax hightlighting
+emmet-vim|html/css/js snippets
+jedi-vim|python intellisense
+tern|javascript intellisense
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionallity:
 
--   `<F3>`  to toggle 'netrw' file browser
--   `:MakeTags`  to generaze 'tags'
+| Command | Description |
+|:-:|:-:|
+`<F3>`|to toggle 'netrw' file browser
+`:MakeTags`|to generaze 'tags'
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets: will expand in current file
 
-| Motion | Description |
-|:-:|:-:
+| Command | Description |
+|:-:|:-:|
 |`\bulma`|html template

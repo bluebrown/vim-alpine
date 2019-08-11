@@ -37,8 +37,9 @@ silent! helptags ALL
 
 " Language:
 " "polyglot"                syntax hightlighting
-" "jedi-vim"                python intellisense
 " "emmet-vim"               html/css/js snippets
+" "jedi-vim"                python intellisense
+" "tern"                    javascript intellisense
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 

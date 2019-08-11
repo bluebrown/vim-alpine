@@ -2,15 +2,6 @@
 	path = pack/core/start/vim
 	url = https://github.com/dracula/vim
 
-[submodule "pack/lang/opt/vim-css3-syntax"]
-	path = pack/lang/opt/vim-css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax
-[submodule "pack/lang/opt/scss-syntax.vim"]
-	path = pack/lang/opt/scss-syntax.vim
-	url = https://github.com/cakebaker/scss-syntax.vim
-[submodule "pack/lang/opt/vim-pug"]
-	path = pack/lang/opt/vim-pug
-	url = https://github.com/digitaltoad/vim-pug
 [submodule "pack/lang/start/jedi-vim"]
 	path = pack/lang/start/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim

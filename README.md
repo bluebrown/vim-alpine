@@ -75,14 +75,14 @@ The vimrc loads files from the modules folder to keep things more organized add 
  To use tern, setup a `.tern-project.json` file.<br>
  You can copy the example file from `:help tern-usage` to get going.<br>
 
-## Custom Functionality:
+### Custom Functionality:
 
 | Command     | Description                   |
 |:-----------:|:-----------------------------:|
 | `<F3>`      | toggle netrw file browser     |
 | `:MakeTags` | generate ctags                |
 
-## Snippets:
+### Snippets:
 
 | Command  | Description   |
 |:--------:|:-------------:|

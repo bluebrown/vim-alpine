@@ -1,10 +1,11 @@
+
 # vim-alpine
 
-a minimalist setup, that containes only a handfull of essential configurations and plugins.
+a minimalist setup, that contains only a handful of essential configurations and plugins.
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#setup)Setup
 
-Make sure to clone this repository recursively, as it is composed of serveral submodules.
+Make sure to clone this repository recursively, as it is composed of several sub modules.
 
 ```
 git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
@@ -15,7 +16,7 @@ Since this project relies on vim8's native plugin management through :packadd, n
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#vimrc)vimrc
 
-The vimrc loads files from the modules folder to keep things more organized add new functionalitly and settings there
+The vimrc loads files from the modules folder to keep things more organized add new functionality and settings there
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#plugins)Plugins:
 
@@ -23,7 +24,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 
 ### Actions - 'verbs'
 
-| Scriptname | Motion | Description |
+| Script Name | Motion | Description |
 |:-:|:-:|:-:|
 |surround|`s`| manipulate surroundings
 |commentary|`gc`|toggle comments
@@ -33,7 +34,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 
 ### Text Objects - 'nouns'
 
-| Scriptname | Motion | Description |
+| Script Name | Motion | Description |
 |:-:|:-:|:-:|
 |indent-object|`i`|target indent group
 textobj-line|`l`|target line without whitespace
@@ -62,21 +63,23 @@ emmet-vim|html/css/js snippets
 jedi-vim|python intellisense
 tern|javascript intellisense
 
-*Caveat*
- to use ale with pipenv run `pipenv install --dev pylint`. To use ale
- with eslint run `yarn add --dev eslint` & `eslint --init`.
+> *Caveat **Ale***
+ to use ale with **pipenv**, run `pipenv install --dev pylint`.
 
- to use tern setup a `.tern-project.json` file.
+> To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.
+
+> *Ceveate **Tern***
+ To use tern, setup a `.tern-project.json` file.
  You can copy the example file from `:help tern-usage` to get going.
 
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionallity:
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionality:
 
 | Command | Description |
 |:-:|:-:|
 `<F3>`|to toggle 'netrw' file browser
 `:MakeTags`|to generaze 'tags'
 
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets: will expand in current file
+## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets: 
 
 | Command | Description |
 |:-:|:-:|

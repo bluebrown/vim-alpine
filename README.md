@@ -18,11 +18,11 @@ Since this project relies on vim8's native plugin management through :packadd, n
 
 The vimrc loads files from the modules folder to keep things more organized add new functionality and settings there
 
-## Plugins:
+## Vim:
 
 *use `:help <script name>` to learn more*
 
-### Vim Extended
+### Vim Extended:
 
 #### Actions - 'verbs'
 
@@ -34,7 +34,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | sort_motion         |  `gs`  | sort selection          |
 | system_copy         |  `cp`  | copy to xsel clipboard  |
 
-### Text Objects - 'nouns'
+#### Text Objects - 'nouns'
 
 | Script Name    | Motion | Description                    |
 |:--------------:|:------:|:------------------------------:|

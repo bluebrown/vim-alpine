@@ -3,7 +3,7 @@
 
 a minimalist setup, that contains only a handful of essential configurations and plugins.
 
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#setup)Setup
+## Setup
 
 Make sure to clone this repository recursively, as it is composed of several sub modules.
 
@@ -14,15 +14,17 @@ git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
 
 Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#vimrc)vimrc
+## vimrc
 
 The vimrc loads files from the modules folder to keep things more organized add new functionality and settings there
 
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#plugins)Plugins:
+## Plugins:
 
 *use `:help <script name>` to learn more*
 
-### Actions - 'verbs'
+### Vim Extended
+
+#### Actions - 'verbs'
 
 | Script Name         | Motion | Description             |
 |:-------------------:|:------:|:-----------------------:|
@@ -32,7 +34,6 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | sort_motion         |  `gs`  | sort selection          |
 | system_copy         |  `cp`  | copy to xsel clipboard  |
 
-
 ### Text Objects - 'nouns'
 
 | Script Name    | Motion | Description                    |
@@ -41,31 +42,30 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | textobj-line   |   `l`  | target line without whitespace |
 | entire         |   `e`  | target entire document         |
 
+### IDE Feautres:
 
-### IDE:
+#### Editing
 
 | Plugin    | Description                    |
 |:---------:|:------------------------------:|
 | auto-pair | auto close brackets and quotes |
 | supertab  | autocomplete on tab            |
 
-
-### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#git)Git:
-
-| Plugin    | Description          |
-|:---------:|:--------------------:|
-| fugitive  | git integration
-| gitgutter | show changes, inline
-
-
-### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#language)Language:
+#### Language:
 
 | Plugin    | Description             |
 |:---------:|:-----------------------:|
-| polyglot  | syntax hightlighting    |
+| polyglot  | syntax highlighting     |
 | emmet-vim | html/css/js snippets    |
 | jedi-vim  | python intellisense     |
 | tern      | javascript intellisense |
+
+### Git Integration:
+
+| Plugin    | Description          |
+|:---------:|:--------------------:|
+| fugitive  | git integration      |
+| gitgutter | show changes, inline |
 
  *Caveat **Ale***<br>
  to use ale with **pipenv**, run `pipenv install --dev pylint`.<br>
@@ -75,17 +75,15 @@ The vimrc loads files from the modules folder to keep things more organized add 
  To use tern, setup a `.tern-project.json` file.<br>
  You can copy the example file from `:help tern-usage` to get going.<br>
 
-
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionality:
+## Custom Functionality:
 
 | Command     | Description                   |
 |:-----------:|:-----------------------------:|
-| `<F3>`      | toggle netrw file browser |
-| `:MakeTags` | generate ctags             |
+| `<F3>`      | toggle netrw file browser     |
+| `:MakeTags` | generate ctags                |
 
-
-## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets:
+## Snippets:
 
 | Command  | Description   |
 |:--------:|:-------------:|
-| `\bulma` | html template
+| `\bulma` | html template |

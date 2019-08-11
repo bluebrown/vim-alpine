@@ -50,8 +50,8 @@ supertab|autocomplete on tab
 
 | Plugin | Description |
 |:-:|:-:|
--fugitive|git integration
--gitgutter|show changes
+fugitive|git integration
+gitgutter|show changes, inline
 
 ### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#language)Language:
 
@@ -61,6 +61,13 @@ polyglot|syntax hightlighting
 emmet-vim|html/css/js snippets
 jedi-vim|python intellisense
 tern|javascript intellisense
+
+*Caveat*
+ to use ale with pipenv run `pipenv install --dev pylint`. To use ale
+ with eslint run `yarn add --dev eslint` & `eslint --init`.
+
+ to use tern setup a `.tern-project.json` file.
+ You can copy the example file from `:help tern-usage` to get going.
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#custom-functionallity)Custom Functionallity:
 

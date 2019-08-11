@@ -1,5 +1,5 @@
 " source config files
-for f in glob('~/.vim/modules/*.vim', -1, 1)
+for f in glob('~/.vim/modules/*/*.vim', -1, 1)
     execute 'source' f
 endfor
 
@@ -29,15 +29,16 @@ silent! helptags ALL
 " IDE:
 " "auto-pair"               auto close brackets and quotes
 " "supertab"                autocomplete on tab
+" "ale"                     linter
 
 " Git:
 " "fugitive"                git integration
 " "gitgutter"               show changes
 
 " Language:
-" "jedi-vim"
-" "vim-javascript"
-" "emmet-vim"
+" "polyglot"                syntax hightlighting
+" "jedi-vim"                python intellisense
+" "emmet-vim"               html/css/js snippets
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 

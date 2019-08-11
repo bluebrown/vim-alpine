@@ -50,3 +50,6 @@
 [submodule "pack/lang/start/vim-polyglot"]
 	path = pack/lang/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "pack/lang/start/ale"]
+	path = pack/lang/start/ale
+	url = https://github.com/dense-analysis/ale

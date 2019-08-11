@@ -64,9 +64,8 @@ jedi-vim|python intellisense
 tern|javascript intellisense
 
 > *Caveat **Ale***
- to use ale with **pipenv**, run `pipenv install --dev pylint`.
-
-> To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.
+ to use ale with **pipenv**, run `pipenv install --dev pylint`.  
+ To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.
 
 > *Ceveate **Tern***
  To use tern, setup a `.tern-project.json` file.

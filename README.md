@@ -24,48 +24,48 @@ The vimrc loads files from the modules folder to keep things more organized add 
 
 ### Actions - 'verbs'
 
-| Script Name             | Motion | Description             |
-|:-----------------------:|:------:|:-----------------------:|
-| **surround**            |   `s`  | manipulate surroundings |
-| **commentary**          |  `gc`  | toggle comments         |
-| **ReplaceWithRegister** |  `gr`  | replace selection       |
-| **sort_motion**         |  `gs`  | sort selection          |
-| **system_copy**         |  `cp`  | copy to xsel clipboard  |
+| Script Name           | Motion | Description             |
+|:---------------------:|:------:|:-----------------------:|
+| *surround*            |   `s`  | manipulate surroundings |
+| *commentary*          |  `gc`  | toggle comments         |
+| *ReplaceWithRegister* |  `gr`  | replace selection       |
+| *sort_motion*         |  `gs`  | sort selection          |
+| *system_copy*         |  `cp`  | copy to xsel clipboard  |
 
 
 ### Text Objects - 'nouns'
 
-| Script Name        | Motion | Description                    |
-|:------------------:|:------:|:------------------------------:|
-| **indent-object**  |   `i`  | target indent group            |
-| **textobj-line**   |   `l`  | target line without whitespace |
-| **entire**         |   `e`  | target entire document         |
+| Script Name      | Motion | Description                    |
+|:----------------:|:------:|:------------------------------:|
+| *indent-object*  |   `i`  | target indent group            |
+| *textobj-line*   |   `l`  | target line without whitespace |
+| *entire*         |   `e`  | target entire document         |
 
 
 ### IDE:
 
-| Plugin        | Description                    |
-|:-------------:|:------------------------------:|
-| **auto-pair** | auto close brackets and quotes |
-| **supertab**  | autocomplete on tab            |
+| Plugin      | Description                    |
+|:-----------:|:------------------------------:|
+| *auto-pair* | auto close brackets and quotes |
+| *supertab*  | autocomplete on tab            |
 
 
 ### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#git)Git:
 
-| Plugin        | Description          |
-|:-------------:|:--------------------:|
-| **fugitive**  | git integration
-| **gitgutter** | show changes, inline
+| Plugin      | Description          |
+|:-----------:|:--------------------:|
+| *fugitive*  | git integration
+| *gitgutter* | show changes, inline
 
 
 ### [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#language)Language:
 
-| Plugin        | Description             |
-|:-------------:|:-----------------------:|
-| **polyglot**  | syntax hightlighting    |
-| **emmet-vim** | html/css/js snippets    |
-| **jedi-vim**  | python intellisense     |
-| **tern**      | javascript intellisense |
+| Plugin      | Description             |
+|:-----------:|:-----------------------:|
+| *polyglot*  | syntax hightlighting    |
+| *emmet-vim* | html/css/js snippets    |
+| *edi-vim*   | python intellisense     |
+| *tern*      | javascript intellisense |
 
  *Caveat **Ale***<br>
  to use ale with **pipenv**, run `pipenv install --dev pylint`.<br>
@@ -80,8 +80,8 @@ The vimrc loads files from the modules folder to keep things more organized add 
 
 | Command     | Description                   |
 |:-----------:|:-----------------------------:|
-| `<F3>`      |to toggle 'netrw' file browser |
-| `:MakeTags` |to generaze 'tags'             |
+| `<F3>`      | toggle netrw file browser |
+| `:MakeTags` | generate ctags             |
 
 
 ## [](https://github.com/bluebrown/vim-alpine/blob/master/README.md#snippets-will-expand-in-current-file)Snippets:

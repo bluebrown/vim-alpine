@@ -1,6 +1,7 @@
+
 # vim-alpine
 
-a minimalist setup, that contains only a handful of essential configurations and plugins.
+A minimalist setup, that contains only a handful of essential configurations and plugins.
 
 
 ## Setup
@@ -17,15 +18,15 @@ Since this project relies on vim8's native plugin management through :packadd, n
 
 ## vimrc
 
-The vimrc loads files from the modules folder to keep things more organized add new functionality and settings there
+The vimrc loads files from the modules folder, to keep things more organized. Add new functionality and settings there.
 
 
-## Vim:
+## Vim
 
-*use `:help <script name>` to learn more*
+*Use `:help <script name>` to learn more.*
 
 
-### Vim Extended:
+### Vim Extended
 
 #### Actions - 'verbs'
 
@@ -46,7 +47,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | entire         |   `e`  | target entire document         |
 
 
-### IDE Feautres:
+### IDE Feautres
 
 #### Editing
 
@@ -73,7 +74,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
  You can copy the example file from `:help tern-usage` to get going.<br>
 
 
-### Git Integration:
+### Git Integration
 
 | Plugin    | Description          |
 |:---------:|:--------------------:|
@@ -81,7 +82,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | gitgutter | show changes, inline |
 
 
-### Custom Functionality:
+### Custom Functionality
 
 | Command     | Description                   |
 |:-----------:|:-----------------------------:|
@@ -89,7 +90,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | `:MakeTags` | generate ctags                |
 
 
-### Snippets:
+### Snippets
 
 | Command  | Description   |
 |:--------:|:-------------:|

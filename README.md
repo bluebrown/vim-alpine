@@ -1,7 +1,7 @@
-
 # vim-alpine
 
 a minimalist setup, that contains only a handful of essential configurations and plugins.
+
 
 ## Setup
 
@@ -14,13 +14,16 @@ git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
 
 Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
+
 ## vimrc
 
 The vimrc loads files from the modules folder to keep things more organized add new functionality and settings there
 
+
 ## Vim:
 
 *use `:help <script name>` to learn more*
+
 
 ### Vim Extended:
 
@@ -42,6 +45,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | textobj-line   |   `l`  | target line without whitespace |
 | entire         |   `e`  | target entire document         |
 
+
 ### IDE Feautres:
 
 #### Editing
@@ -60,14 +64,7 @@ The vimrc loads files from the modules folder to keep things more organized add 
 | jedi-vim  | python intellisense     |
 | tern      | javascript intellisense |
 
-### Git Integration:
-
-| Plugin    | Description          |
-|:---------:|:--------------------:|
-| fugitive  | git integration      |
-| gitgutter | show changes, inline |
-
- *Caveat **Ale***<br>
+*Caveat **Ale***<br>
  to use ale with **pipenv**, run `pipenv install --dev pylint`.<br>
  To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.<br>
 
@@ -75,12 +72,22 @@ The vimrc loads files from the modules folder to keep things more organized add 
  To use tern, setup a `.tern-project.json` file.<br>
  You can copy the example file from `:help tern-usage` to get going.<br>
 
+
+### Git Integration:
+
+| Plugin    | Description          |
+|:---------:|:--------------------:|
+| fugitive  | git integration      |
+| gitgutter | show changes, inline |
+
+
 ### Custom Functionality:
 
 | Command     | Description                   |
 |:-----------:|:-----------------------------:|
 | `<F3>`      | toggle netrw file browser     |
 | `:MakeTags` | generate ctags                |
+
 
 ### Snippets:
 

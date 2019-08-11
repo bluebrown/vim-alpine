@@ -53,3 +53,6 @@
 [submodule "pack/lang/start/ale"]
 	path = pack/lang/start/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "pack/lang/start/tern_for_vim"]
+	path = pack/lang/start/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim

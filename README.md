@@ -53,7 +53,7 @@ The vimrc loads files from the modules folder, to keep things more organized. Ad
 
 | Plugin    | Description                    |
 |:---------:|:------------------------------:|
-| airline   | status line                    |
+| powerline | python powerline integreation  |
 | supertab  | autocomplete on tab            |
 | auto-pair | auto close brackets and quotes |
 

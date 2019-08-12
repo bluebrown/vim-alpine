@@ -10,3 +10,5 @@ packloadall
 silent! helptags ALL
 
 
+" Ideas:
+" - toggle line numbers on <Fx>

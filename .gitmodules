@@ -56,3 +56,6 @@
 [submodule "pack/lang/start/tern_for_vim"]
 	path = pack/lang/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim
+[submodule "pack/core/start/vim-airline"]
+	path = pack/core/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline

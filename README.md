@@ -49,19 +49,20 @@ The vimrc loads files from the modules folder, to keep things more organized. Ad
 
 ### IDE Feautres
 
-#### Editing
+#### Editor
 
 | Plugin    | Description                    |
 |:---------:|:------------------------------:|
-| auto-pair | auto close brackets and quotes |
+| airline   | status line                    |
 | supertab  | autocomplete on tab            |
-| ale       | linting                        |
+| auto-pair | auto close brackets and quotes |
 
-#### Language:
+#### Language
 
 | Plugin    | Description             |
 |:---------:|:-----------------------:|
 | polyglot  | syntax highlighting     |
+| ale       | linting                 |
 | emmet-vim | html/css/js snippets    |
 | jedi-vim  | python intellisense     |
 | tern      | javascript intellisense |

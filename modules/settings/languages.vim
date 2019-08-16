@@ -20,6 +20,7 @@ set errorformat=%f:%l:\ %m
 au FileType python setlocal omnifunc=python3complete#Complete
 
 " JavaScript:
+au fileType javascript set tabstop=2 softtabstop=2 shiftwidth=2
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1

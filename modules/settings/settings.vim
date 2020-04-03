@@ -53,7 +53,7 @@ set nospell
 " Visual:
 set t_Co=256
 try
-  colorscheme dracula
+colorscheme dracula
 catch
 endtry
 syntax enable
@@ -62,6 +62,6 @@ set foldcolumn=1
 set listchars=tab:\|\ ,trail:▫
 highlight foldcolumn ctermbg=none
 " Below will use the terminal background - useful when using with tmux
-"highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
-"highlight Normal ctermbg=none
-"highlight NonText ctermbg=none
+highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none

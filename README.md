@@ -51,9 +51,9 @@ The vimrc loads files from the modules folder, to keep things more organized. Ad
 
 #### Editor
 
-| Plugin    | Description                    |
-|:---------:|:------------------------------:|
-| powerline | python powerline integreation  |
+| Plugin    | Description                    | Comment |
+|:---------:|:------------------------------:|:-------:|
+| powerline | python powerline integreation  | Currenclty commeted out in modules/custom/plugins.vim |
 | supertab  | autocomplete on tab            |
 | auto-pair | auto close brackets and quotes |
 

@@ -97,3 +97,13 @@ It doesn't play with supetab at the moment. Get completion with `^X^O`
 | Command  | Description   |
 |:--------:|:-------------:|
 | `\bulma` | html template |
+
+
+## Other Material
+
+This project was heaviliy inspired by two talks from Chris Toomey and Max Cantor. Watching these will also help using the setup.
+
+- [Mastering the Vim Language](https://www.youtube.com/watch?v=wlR5gYd6um0)
+- [How to Do 90% of What Plugins Do (With Just Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM)
+
+

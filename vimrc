@@ -1,5 +1,5 @@
 " source config files
-for f in glob('~/.vim/modules/*/*.vim', -1, 1)
+for f in glob('~/.vim/conf.d/*.vim', -1, 1)
     execute 'source' f
 endfor
 
@@ -9,6 +9,3 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
-
-" Ideas:
-" - toggle line numbers on <Fx>

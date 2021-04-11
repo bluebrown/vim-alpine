@@ -10,98 +10,33 @@ Make sure to clone this repository recursively, as it is composed of several sub
 
 ```
 git clone --recursive https://github.com/bluebrown/vim-alpine.git ~/.vim
-
 ```
 
 Since this project relies on vim8's native plugin management through :packadd, no other tools or installation are required.
 
-
 ## vimrc
 
-The vimrc loads files from the modules folder, to keep things more organized. Add new functionality and settings there.
+The vimrc will load every `.vim` file in the `conf.d` folder. Put additionally configuration here and or edit the vim-conf.vim
+placed there.
 
+```bash
+for f in glob('~/.vim/conf.d/*.vim', -1, 1)
+    execute 'source' f
+endfor
+```
 
-## Vim
+## Plugins
 
-*Use `:help <script name>` to learn more.*
+Tou install plugins, add the repo of the plugin as `submodule` under `pack/core/start`. `Nerdtree` has been added to this path as example.
 
-
-### Vim Extended
-
-#### Actions - 'verbs'
-
-| Script Name         | Motion | Description             |
-|:-------------------:|:------:|:-----------------------:|
-| surround            |   `s`  | manipulate surroundings |
-| commentary          |  `gc`  | toggle comments         |
-| ReplaceWithRegister |  `gr`  | replace selection       |
-| sort_motion         |  `gs`  | sort selection          |
-| system_copy         |  `cp`  | copy to xsel clipboard  |
-
-#### Text Objects - 'nouns'
-
-| Script Name    | Motion | Description                    |
-|:--------------:|:------:|:------------------------------:|
-| indent-object  |   `i`  | target indent group            |
-| textobj-line   |   `l`  | target line without whitespace |
-| entire         |   `e`  | target entire document         |
-
-
-### IDE Feautres
-
-#### Editor
-
-| Plugin    | Description                    | Comment |
-|:---------:|:------------------------------:|:-------:|
-| powerline | python powerline integreation  | Currenclty commeted out in modules/custom/plugins.vim |
-| supertab  | autocomplete on tab            |
-| auto-pair | auto close brackets and quotes |
-
-#### Language
-
-| Plugin    | Description             |
-|:---------:|:-----------------------:|
-| polyglot  | syntax highlighting     |
-| ale       | linting                 |
-| emmet-vim | html/css/js snippets    |
-| jedi-vim  | python intellisense     |
-| tern      | javascript intellisense |
-
-*Caveat **Ale***<br>
- to use ale with **pipenv**, run `pipenv install --dev pylint`.<br>
- To use ale  with **eslint** run `yarn add --dev eslint` & `eslint --init`.<br>
-
- *Caveat **Tern***<br>
- To use tern, setup a `.tern-project.json` file.<br>
- You can copy the example file from `:help tern-usage` to get going.<br>
-It doesn't play with supetab at the moment. Get completion with `^X^O`
-
-### Git Integration
-
-| Plugin    | Description          |
-|:---------:|:--------------------:|
-| fugitive  | git integration      |
-| gitgutter | show changes, inline |
-
-
-### Custom Functionality
-
-| Command     | Description                   |
-|:-----------:|:-----------------------------:|
-| `<F3>`      | toggle netrw file browser     |
-| `:MakeTags` | generate ctags                |
-
-
-### Snippets
-
-| Command  | Description   |
-|:--------:|:-------------:|
-| `\bulma` | html template |
-
+.gitmodules
+```
+[submodule "pack/core/start/nerdtree"]
+	path = pack/core/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+```
 
 ## Other Material
-
-This project was heaviliy inspired by two talks from Chris Toomey and Max Cantor. Watching these will also help using the setup.
 
 - [Mastering the Vim Language](https://www.youtube.com/watch?v=wlR5gYd6um0)
 - [How to Do 90% of What Plugins Do (With Just Vim)](https://www.youtube.com/watch?v=XA2WjJbmmoM)
